@@ -1,0 +1,7 @@
+<!-- <p>task-edit works!</p> -->
+<h2>Edit Task</h2>
+<form (ngSubmit)="updateTask()">
+  <label for="title">Title</label>
+  <input type="text" id="title" [(ngModel)]="task.title" name="title" required>
+  <button type="submit">Update</button>
+</form>

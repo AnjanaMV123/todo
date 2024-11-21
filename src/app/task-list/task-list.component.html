@@ -1,0 +1,13 @@
+<div class="task-list">
+    <h2>To-Do List</h2>
+    <div *ngFor="let task of tasks">
+      <span>{{ task.title }}</span>
+      <!-- <button (click)="deleteTask(task.id)">Delete</button> -->
+      <button *ngIf="task.id !== undefined" (click)="deleteTask(task.id!)">Delete</button>
+
+      <button [routerLink]="['/tasks/edit', task.id]">Edit</button>
+    </div>
+    <button [routerLink]="['/tasks/create']">Add Task</button>
+  </div>
+  
+  
